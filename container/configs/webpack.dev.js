@@ -6,6 +6,7 @@ const packageJson = require("../package.json");
 
 const devConfig = {
   mode: "development",
+  entry: './src/index.ts',
   output: {
     publicPath: "http://localhost:8080/",
   },
