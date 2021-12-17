@@ -22,6 +22,7 @@ const devConfig = {
     }),
     new ModuleFederationPlugin({
       name: "sidebar",
+      library: { type: 'var', name: 'sidebar' },
       filename: "remoteEntry.js",
       exposes: {
         "./SidebarMf": "./src/bootstrap",

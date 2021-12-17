@@ -13,6 +13,6 @@ if (process.env.NODE_ENV === "development") {
   mount(document.querySelector("#_sidebar"));
 }
 
-module.exports = {
+export  {
   mount,
 };

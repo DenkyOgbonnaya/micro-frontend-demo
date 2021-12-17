@@ -4,14 +4,18 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 
+const mode = process.env.NODE_ENV || "production";
+
+const PORT = 8080;
+const publicPath = `http://localhost:${PORT}/`;
 const devConfig = {
-  mode: "development",
-  entry: './src/index.ts',
+  mode,
+  entry: "./src/index.ts",
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath,
   },
   devServer: {
-    port: 8080,
+    port: PORT,
     historyApiFallback: {
       index: "index.html",
     },
@@ -22,9 +26,12 @@ const devConfig = {
     }),
     new ModuleFederationPlugin({
       name: "container",
+      library: { type: 'var', name: 'container' },
+      remotes: {
+        sidebar: "sidebar"
+      },
       shared: packageJson.dependencies,
     }),
   ],
 };
-
 module.exports = merge(commonConfig, devConfig);
