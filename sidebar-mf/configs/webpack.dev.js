@@ -12,6 +12,7 @@ const devConfig = {
   },
   devServer: {
     port: 8081,
+    hot: true,
     historyApiFallback: {
       index: "index.html",
     },
@@ -30,6 +31,9 @@ const devConfig = {
       shared: packageJson.dependencies,
     }),
   ],
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
 };
 
 module.exports = merge(commonConfig, devConfig);
