@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --config configs/webpack.dev.js"
+    "start": "webpack serve --config configs/webpack.dev.js",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts ."
   },
   "devDependencies": {
     "@babel/core": "^7.16.5",
@@ -14,9 +15,12 @@
     "@babel/preset-typescript": "^7.16.5",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
+    "eslint": "^8.5.0",
     "html-webpack-plugin": "^5.5.0",
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.45.0",
