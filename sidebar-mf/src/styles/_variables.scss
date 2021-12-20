@@ -1,0 +1,28 @@
+// theme colors
+$primary: #0f172a;
+$secondary: #131d35;
+$red: #d32752;
+$info: #f6c31c;
+$light-dark-blue: #131d35;
+$dark-blue: #0f172a;
+$white: #ffffff;
+$green: #22b783;
+$danger: #ef4d56;
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+// base-shadow
+$base-box-shadow: 1px 3px 5px rgb(0, 0, 0, 0.1);
+// font sizes
+$base-font-size: 1rem;
+$base-font-weight: 600;
+// color pallets
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "info": $info,
+);

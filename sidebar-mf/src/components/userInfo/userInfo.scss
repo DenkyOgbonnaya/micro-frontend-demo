@@ -1,0 +1,19 @@
+@import "../../styles";
+.userInfo {
+  display: flex;
+  padding: $base-padding;
+  background: $dark-blue;
+}
+.userInfo__details {
+  margin-left: $base-margin;
+  align-self: center;
+  p {
+    font-size: $base-font-size;
+    color: $white;
+    font-weight: $base-font-weight;
+  }
+  p:last-child {
+    color: #8d93a1;
+    font-weight: normal;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../styles";
+.userAvatar {
+  max-width: 70px;
+  position: relative;
+  img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+  }
+  .userAvatar__onlineStatus {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $green;
+    top: 10px;
+    right: -3px;
+  }
+  .userAvatar__onlineStatus--green {
+    background: $green;
+  }
+  .userAvatar__onlineStatus--red {
+    background: $danger;
+  }
+}
