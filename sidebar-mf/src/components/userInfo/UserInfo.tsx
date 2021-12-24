@@ -17,7 +17,7 @@ interface IProps {
 const UserInfo: React.FC<IProps> = ({ user }) => {
   return (
     <div className="flex p-7 bg-[color:var(--dark-blue)]">
-      <UserAvatar avatarUrl="" isOnline={true} />
+      <UserAvatar avatarUrl="" isOnline={false} />
       <div className="self-center ml-2">
         <p className="text-[#ccd1e0] font-bold">
           {user.title}. {user.firstName} {user.lastName}{" "}
