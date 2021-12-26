@@ -8,3 +8,10 @@
   --grey: #9da2af;
   --body-bg: #f5f8fa;
 }
+
+.th {
+  @apply text-[color:var(--grey)] font-semibold text-sm p-3 text-left;
+}
+.td {
+  @apply text-[color:var(--light-dark-blue)] font-semibold text-sm p-3 text-left;
+}

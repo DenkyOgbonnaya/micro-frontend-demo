@@ -24,8 +24,8 @@ const InfoCharts = () => {
   ];
   return (
     <>
-      <div className="flex justify-between px-3">
-        <div className="w-[15%]">
+      <div className="flex justify-between px-3 mb-4 w-full">
+        <div className="w-[23%]">
           <InfoChartCard
             title="Sessions"
             value="2400"
@@ -37,7 +37,7 @@ const InfoCharts = () => {
             metaInfoColor=""
           />
         </div>
-        <div className="w-[15%]">
+        <div className="w-[23%]">
           <InfoChartCard
             title="Avg.Sessions"
             value="00:18"
@@ -49,7 +49,7 @@ const InfoCharts = () => {
             metaInfoColor="green"
           />
         </div>
-        <div className="w-[15%]">
+        <div className="w-[23%]">
           <InfoChartCard
             title="Bounce Rate"
             value="$2400"
@@ -61,7 +61,7 @@ const InfoCharts = () => {
             metaInfoColor=""
           />
         </div>
-        <div className="w-[15%]">
+        <div className="w-[23%]">
           <InfoChartCard
             title="Goal Completion"
             value="8500"
