@@ -1,11 +1,13 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
-
+import { createMemoryHistory, createBrowserHistory } from "history";
 import App from "./App";
+
+const history = createMemoryHistory();
 
 const mount = (el: Element) => {
   if (el) {
-    ReactDom.render(<App />, el);
+    ReactDom.render(<App history={history} />, el);
   }
 };
 

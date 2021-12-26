@@ -1,10 +1,17 @@
 import * as React from "react";
+import { Router, MemoryRouter } from "react-router-dom";
+import * as routeHistory from "history";
+import Navigations from "./navigations";
 
-const App: React.FC = () => {
+interface IProps {
+  history: routeHistory.MemoryHistory;
+}
+const App: React.FC<IProps> = ({ history }) => {
   return (
-    <div className="h-[100vh]">
-      <h4 className="text-yellow-400">Hello Analytics</h4>
-    </div>
+    //@ts-ignore
+    <MemoryRouter history={history}>
+      <Navigations />
+    </MemoryRouter>
   );
 };
 

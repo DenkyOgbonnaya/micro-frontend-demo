@@ -423,17 +423,175 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+*, ::before, ::after {
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+}
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
 .h-\[100vh\] {
   height: 100vh;
 }
 
-.text-yellow-400 {
+.h-4 {
+  height: 1rem;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-7 {
+  width: 1.75rem;
+}
+
+.w-\[15\%\] {
+  width: 15%;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.bg-\[color\:var\(--body-bg\)\] {
+  background-color: var(--body-bg);
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(34\2c 183\2c 131\2c \.15\)\] {
+  background-color: rgba(34,183,131,.15);
+}
+
+.bg-\[rgba\(239\2c 77\2c 86\2c \.15\)\] {
+  background-color: rgba(239,77,86,.15);
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-\[color\:var\(--dark-blue\)\] {
+  color: var(--dark-blue);
+}
+
+.text-\[color\:var\(--grey\)\] {
+  color: var(--grey);
+}
+
+.text-blue-600 {
   --tw-text-opacity: 1;
-  color: rgb(250 204 21 / var(--tw-text-opacity));
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.text-\[\#22b783\] {
+  --tw-text-opacity: 1;
+  color: rgb(34 183 131 / var(--tw-text-opacity));
+}
+
+.text-\[\#ef4d56\] {
+  --tw-text-opacity: 1;
+  color: rgb(239 77 86 / var(--tw-text-opacity));
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 :root {
   --light-dark-blue: #131d35;
   --dark-blue: #0f172a;
   --grey: #9da2af;
+  --body-bg: #f5f8fa;
 }
