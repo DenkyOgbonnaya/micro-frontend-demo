@@ -1,31 +1,30 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import {
-  UsersIcon,
-  ClockIcon,
-  TrendingUpIcon,
-  CheckCircleIcon,
-} from "@heroicons/react/outline";
+
 import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
 import BreadCrumbItem from "../../components/breadcrumb/BreadCrumbItem";
-import InfoChartCard from "../../components/infoChartCard/InfoChartCard";
 import { DASHOARD_ROUTE } from "../../navigations/constants";
+import { series } from "../../shared/types";
+import { AudienceOverview, InfoCharts } from "./components";
 
+interface IState {
+  audienceData: series[];
+}
 const Dashboard: React.FC = () => {
-  const sessionsSeries = [
-    {
-      name: "Series",
-      data: [10, 5, 10, 5, 15, 10, 8, 5, 10, 20, 10],
-      color: "rgba(34,183,131,.15)",
-    },
-  ];
-  const sessionsSeries2 = [
-    {
-      name: "Series",
-      data: [10, 5, 10, 5, 15, 10, 8, 5, 10, 20, 10],
-      color: "rgba(239,77,86,.15)",
-    },
-  ];
+  const [audienceData] = React.useState<IState["audienceData"]>(audeinceSeries);
+  const [categories] = React.useState([
+    "Mon",
+    "Tues",
+    "Weds",
+    "Thurs",
+    "Fri",
+    "Sat",
+    "Sun",
+    "Mon",
+    "Tues",
+    "Weds",
+    "Thurs",
+  ]);
   return (
     <div className="flex flex-col bg-[color:var(--body-bg)] h-[100vh]">
       <BreadCrumb pageTitle="Analytics">
@@ -42,58 +41,23 @@ const Dashboard: React.FC = () => {
           </span>
         </BreadCrumbItem>
       </BreadCrumb>
-      <div className="flex justify-between px-3">
-        <div className="w-[15%]">
-          <InfoChartCard
-            title="Sessions"
-            value="2400"
-            Icon={
-              <UsersIcon className="w-7 h-7 text-[color:var(--dark-blue)]" />
-            }
-            metaInfo=""
-            chartData={sessionsSeries2}
-            metaInfoColor=""
-          />
-        </div>
-        <div className="w-[15%]">
-          <InfoChartCard
-            title="Avg.Sessions"
-            value="00:18"
-            Icon={
-              <ClockIcon className="w-7 h-7 text-[color:var(--dark-blue)]" />
-            }
-            metaInfo="Active"
-            chartData={sessionsSeries}
-            metaInfoColor="green"
-          />
-        </div>
-        <div className="w-[15%]">
-          <InfoChartCard
-            title="Bounce Rate"
-            value="$2400"
-            Icon={
-              <TrendingUpIcon className="w-7 h-7 text-[color:var(--dark-blue)]" />
-            }
-            metaInfo=""
-            chartData={sessionsSeries2}
-            metaInfoColor=""
-          />
-        </div>
-        <div className="w-[15%]">
-          <InfoChartCard
-            title="Goal Completion"
-            value="8500"
-            Icon={
-              <CheckCircleIcon className="w-7 h-7 text-[color:var(--dark-blue)]" />
-            }
-            metaInfo="-2%"
-            chartData={sessionsSeries}
-            metaInfoColor="red"
-          />
-        </div>
-      </div>
+      <InfoCharts />
+      <AudienceOverview series={audienceData} xCategories={categories} />
     </div>
   );
 };
-
+const audeinceSeries: series[] = [
+  {
+    name: "series 1",
+    type:"column",
+    data: [300, 120, 190, 120, 250, 160, 140, 305, 113, 201, 120],
+    color: "#8d93a1",
+  },
+  {
+    name: "series 2",
+    type: "line",
+    data: [142, 135, 227, 103, 122, 216, 230, 142, 135, 227, 103],
+    color: "#435177",
+  },
+];
 export default Dashboard;

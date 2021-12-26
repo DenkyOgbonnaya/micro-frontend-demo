@@ -1,6 +1,5 @@
 import * as React from "react";
 import Chart from "react-apexcharts";
-import * as ApexChart from "react-apexcharts";
 
 type chartData = { type?: string; name?: string; data: string[] | number[] };
 interface IProps {
