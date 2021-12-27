@@ -4,3 +4,10 @@ export type series = {
   data: string[] | number[];
   color: string;
 };
+export type statCardData = {
+  id: string | number;
+  country: string;
+  value: string | number;
+  countryFlag: string;
+  percentValue: string;
+};
