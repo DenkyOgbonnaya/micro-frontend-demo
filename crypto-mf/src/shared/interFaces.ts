@@ -8,3 +8,18 @@ export interface coinRate {
   upPercent: string | number;
   ratePercent: string | number;
 }
+
+export interface transaction {
+  id: number | string;
+  type: "sent" | "recieved";
+  date: string;
+  amount: number | string;
+}
+
+export interface historicalPriceVolume {
+  id: string | number;
+  date: string;
+  price: string | number;
+  volume: string;
+  change: number;
+}

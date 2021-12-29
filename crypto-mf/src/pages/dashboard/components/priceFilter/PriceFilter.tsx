@@ -21,6 +21,7 @@ const PriceFilter: React.FC = () => {
             className={`cursor-pointer ${isActive(item) && "text-blue-400"} `}
             onClick={() => handleSelect(item)}
             role="button"
+            aria-current={isActive ? "true" : "false"}
           >
             {item}
           </span>
