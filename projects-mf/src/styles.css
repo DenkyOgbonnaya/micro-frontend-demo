@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light-dark-blue: #131d35;
+  --dark-blue: #0f172a;
+  --grey: #9da2af;
+  --body-bg: #f5f8fa;
+}
+
+.th {
+  @apply text-[color:var(--grey)] font-semibold text-sm p-3 text-center border-t;
+}
+.td {
+  @apply text-[color:var(--light-dark-blue)] p-3 text-center border-t text-sm;
+}
+.button {
+  @apply flex border rounded border-solid border-[color:var(--grey)] p-2 w-fit h-fit;
+}
+.input {
+  @apply border-b outline-none border-gray-300 text-sm;
+}
+.li {
+  @apply text-sm font-semibold text-[color:var(--dark-blue)] inline mr-3;
+}
+.ul {
+  @apply bg-gray-200 p-3 rounded w-full h-fit flex justify-between;
+}
+.tabs__tab {
+  @apply text-[color:var(--light-dark-blue)] text-sm font-semibold pb-2 border-[color:var(--grey)]
+}
