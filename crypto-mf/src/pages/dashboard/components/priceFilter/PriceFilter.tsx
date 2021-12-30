@@ -11,12 +11,9 @@ const PriceFilter: React.FC = () => {
     return value === active;
   };
   return (
-    <ul className=" bg-gray-200 p-3 rounded w-full h-fit flex justify-between">
+    <ul className="ul">
       {fiterItems.map((item) => (
-        <li
-          key={item}
-          className="text-sm font-semibold text-[color:var(--dark-blue)] inline mr-3"
-        >
+        <li key={item} className="li">
           <span
             className={`cursor-pointer ${isActive(item) && "text-blue-400"} `}
             onClick={() => handleSelect(item)}

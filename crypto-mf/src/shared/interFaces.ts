@@ -23,3 +23,17 @@ export interface historicalPriceVolume {
   volume: string;
   change: number;
 }
+
+export interface coin {
+  id: string | number;
+  name: string;
+  img: string;
+  value: string | number;
+  percentValue: number;
+}
+export interface trade {
+  id: number | string;
+  price: number;
+  amount: number;
+  total: number;
+}
