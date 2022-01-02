@@ -1,0 +1,28 @@
+import * as React from "react";
+import { User1 } from "../../../../asset";
+
+interface IProps {
+  avatarUrl: string;
+  isOnline: boolean;
+}
+const UserAvatar: React.FC<IProps> = ({ avatarUrl, isOnline = false }) => {
+  return (
+    <div className="relative w-13">
+      <img
+        src={avatarUrl || User1}
+        alt="avatar"
+        className="rounded-full w-12 h-12"
+      />
+      <div
+        className={`absolute w-3 h-3 rounded-full top-2 -right-0.5 ${
+          isOnline ? "bg-green-700" : "bg-red-700"
+        }`}
+        role="status"
+      >
+        {""}
+      </div>
+    </div>
+  );
+};
+
+export default UserAvatar;

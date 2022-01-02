@@ -33,3 +33,9 @@
 .divider {
   @apply border-b border-dashed border-[color:var(--grey)] py-2;
 }
+.img-group {
+  @apply flex;
+}
+.img-group__img {
+  @apply -ml-4 w-8 h-8 rounded-full hover:z-20;
+}
