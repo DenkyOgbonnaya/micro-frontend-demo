@@ -1,0 +1,98 @@
+import {
+  Project1,
+  Project2,
+  User1,
+  User10,
+  User2,
+  User4,
+  User9,
+  User5,
+} from "../../../asset";
+import { teamData } from "../shared/types";
+
+export const teams: teamData[] = [
+  {
+    id: 1,
+    user: {
+      firstName: "Marnie",
+      lastName: "Flowers",
+      role: "Team Leader",
+      imgUrl: User9,
+    },
+    team: "UI/UX Design Team",
+    project: "Banking",
+    projectImg: Project1,
+    teamDesc: "Contrary to popular belief, Lorem Ipsum is not simply",
+    teamColor: "bg-yellow-500",
+  },
+  {
+    id: 2,
+    user: {
+      firstName: "Willie",
+      lastName: "Miller",
+      role: "Team Leader",
+      imgUrl: User10,
+    },
+    team: "Web Design Team",
+    project: "Payment App",
+    projectImg: Project2,
+    teamDesc: "Contrary to popular belief, Lorem Ipsum is not simply",
+    teamColor: "bg-red-500",
+  },
+  {
+    id: 3,
+    user: {
+      firstName: "Jason",
+      lastName: "Haston",
+      role: "Team Leader",
+      imgUrl: User1,
+    },
+    team: "Frontend Developer Team",
+    project: "Frontend Developer Team",
+    projectImg: Project1,
+    teamDesc: "Contrary to popular belief, Lorem Ipsum is not simply",
+    teamColor: "bg-green-500",
+  },
+  {
+    id: 4,
+    user: {
+      firstName: "Marnie",
+      lastName: "Flowers",
+      role: "Team Leader",
+      imgUrl: User5,
+    },
+    team: "UI/UX Design Team",
+    project: "Banking",
+    projectImg: Project1,
+    teamDesc: "Contrary to popular belief, Lorem Ipsum is not simply",
+    teamColor: "bg-red-500",
+  },
+  {
+    id: 6,
+    user: {
+      firstName: "Willie",
+      lastName: "Miller",
+      role: "Team Leader",
+      imgUrl: User4,
+    },
+    team: "Web Design Team",
+    project: "Payment App",
+    projectImg: Project2,
+    teamDesc: "Contrary to popular belief, Lorem Ipsum is not simply",
+    teamColor: "bg-green-500",
+  },
+  {
+    id: 8,
+    user: {
+      firstName: "Jason",
+      lastName: "Haston",
+      role: "Team Leader",
+      imgUrl: User2,
+    },
+    team: "Frontend Developer Team",
+    project: "Frontend Developer Team",
+    projectImg: Project1,
+    teamDesc: "Contrary to popular belief, Lorem Ipsum is not simply",
+    teamColor: "bg-yellow-500",
+  },
+];

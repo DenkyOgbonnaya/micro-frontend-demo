@@ -9,7 +9,15 @@ export interface teamData {
   };
   team: string;
   teamDesc?: string;
-  teamColor:string;
+  teamColor: string;
   project: string;
   projectImg: string;
+}
+export interface project {
+  id: number | string;
+  name: string;
+  type: string;
+  desc?: string;
+  assignees: string[];
+  comments?: number;
 }

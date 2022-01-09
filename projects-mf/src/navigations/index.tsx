@@ -40,7 +40,7 @@ const Navigations: React.FC = () => {
         </li>
       </ul>
       <Routes>
-        <Route path={DASHBOARD_ROUTE} element={<Teams />} />
+        <Route path={DASHBOARD_ROUTE} element={<KanbanBoard />} />
         <Route path={CHATS_ROUTE} element={<Chats />} />
         <Route path={KANBAN_ROUTES} element={<KanbanBoard />} />
         <Route path={PROJECTS_ROUTE} element={<Projects />} />
