@@ -7,7 +7,7 @@ interface IProps {
 }
 const CoinRate: React.FC<IProps> = ({ coinData }) => {
   return (
-    <div className="flex-col flex shadow-sm bg-white p-4 h-fit w-fit">
+    <div className="flex-col flex shadow-sm bg-white p-4 h-fit w-full mb-1">
       <div className="rounded-full p-1 bg-gray-300 w-fit h-fit">
         <img
           src={coinData.coinUrl}

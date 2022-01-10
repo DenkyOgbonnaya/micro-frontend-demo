@@ -22,8 +22,8 @@ const LiveVisits: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-between w-full">
-      <div className="w-[49%]">
+    <div className="flex justify-between flex-col w-full sm:flex-row">
+      <div className="sm:w-[49%]">
         <Chart
           type="radialBar"
           series={series}
@@ -58,38 +58,66 @@ const LiveVisits: React.FC = () => {
               position: "bottom",
               showForSingleSeries: true,
             },
-           
           }}
         />
-          <div className="flex">
-            <div className="w-3 h-3 rounded-full bg-green-400 self-center mr-3"></div>
-            <p className="text-gray-400 text-sm">Domestic- {series[1]}% </p>
+        <div className="flex">
+          <div className="w-3 h-3 rounded-full bg-green-400 self-center mr-3"></div>
+          <p className="text-gray-400 text-sm">Domestic- {series[1]}% </p>
         </div>
         <div className="flex">
-            <div className="w-3 h-3 rounded-full bg-blue-400 self-center mr-3"></div>
-            <p className="text-gray-400 text-sm">International- {series[0]}% </p>
+          <div className="w-3 h-3 rounded-full bg-blue-400 self-center mr-3"></div>
+          <p className="text-gray-400 text-sm">International- {series[0]}% </p>
         </div>
       </div>
-      <div className="w-[49%] flex flex-col">
-          <h2 className="text-[color:var(--dark-blue)] font-bold self-center">80</h2>
-          <h2 className="text-[color:var(--grey)] font-bold self-center">Right Now</h2>
+      <div className="sm:w-[49%] flex flex-col">
+        <h2 className="text-[color:var(--dark-blue)] font-bold self-center">
+          80
+        </h2>
+        <h2 className="text-[color:var(--grey)] font-bold self-center">
+          Right Now
+        </h2>
         <Chart
           type="bar"
           series={[
             {
-              name: "Organic",
-              data: [55],
-              color: "#6cfd7f",
+              data: [
+                {
+                  x: "Jan",
+                  y: 12,
+                },
+                {
+                  x: "Feb",
+                  y: 10,
+                },
+                
+                
+              ],
             },
             {
-              name: "Direct",
-              data: [70],
-              color: "#dbfd7d",
+              data: [
+                {
+                  x: "Jan",
+                  y: 6,
+                },
+               
+                {
+                  x: "Feb",
+                  y: 5,
+                },
+              ],
             },
             {
-              name: "Campaign",
-              data: [17],
-              color: "#8dabfc",
+              data: [
+                {
+                  x: "Jan",
+                  y: 19,
+                },
+                {
+                  x: "Feb",
+                  y: 13,
+                },
+                
+              ],
             },
           ]}
           options={{
@@ -102,29 +130,28 @@ const LiveVisits: React.FC = () => {
                 show: false,
               },
             },
+            colors: ["#6cfd7f", "#dbfd7d", "#8dabfc"],
             plotOptions: {
-                bar: {
-                  horizontal: true,
-                  borderRadius:10,
-                  columnWidth: "10"
-                }
+              bar: {
+                horizontal: true,
+                borderRadius: 10,
+                columnWidth: "5",
               },
-              grid: {
+            },
+            grid: {
+              show: false,
+            },
+            xaxis: {
+              labels: {
                 show: false,
               },
-              xaxis: {
-                
-                labels: {
-                  show: false,
-                },
+            },
+            yaxis: {
+              labels: {
+                show: false,
               },
-              yaxis: {
-                labels: {
-                  show: false,
-                },
-              },
+            },
           }}
-         
         />
       </div>
     </div>

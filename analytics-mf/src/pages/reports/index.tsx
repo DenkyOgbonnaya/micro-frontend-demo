@@ -28,15 +28,15 @@ const Reports: React.FC = () => {
           </span>
         </BreadCrumbItem>
       </BreadCrumb>
-      <div className="flex justify-between mt-4">
+      <div className="flex justify-between mt-4 flex-col sm:flex-row">
         {reportsData.map((data) => (
-          <div key={data.id} className="w-[32%]">
+          <div key={data.id} className="sm:w-[32%]">
             <StatCard stat={data} />
           </div>
         ))}
       </div>
-      <div className="flex justify-between mt-4">
-        <div className="w-[49%]">
+      <div className="flex justify-between flex-col mt-4 sm:flex-row">
+        <div className=" sm:w-[49%]">
           <Card title="Visitors By Country">
             <div className="relative">
               <div className="absolute right-[100px]  top-[85px]">
@@ -49,7 +49,7 @@ const Reports: React.FC = () => {
             </div>
           </Card>
         </div>
-        <div className="w-[49%]">
+        <div className="sm:w-[49%]">
           <Card title="Live Visits / Traffic Sources">
             <div>
               <LiveVisits />

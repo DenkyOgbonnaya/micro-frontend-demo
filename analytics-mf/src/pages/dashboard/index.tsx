@@ -46,8 +46,8 @@ const Dashboard: React.FC = () => {
           </span>
         </BreadCrumbItem>
       </BreadCrumb>
-      <div className="flex justify-between">
-        <div className="bg-white shadow w-[20%] py-6  flex flex-col justify-between">
+      <div className="flex justify-between flex-col sm:flex-row">
+        <div className="bg-white shadow sm:w-[20%] py-6  flex flex-col justify-between">
           <div className="flex flex-col">
             <div className="flex flex-col items-center p-3">
               <h1 className="text-[color:var(--dark-blue)] font-bold text-xl">
@@ -78,15 +78,15 @@ const Dashboard: React.FC = () => {
             />
           </div>
         </div>
-        <div className="w-[78%] max-h-fit">
+        <div className="sm:w-[78%] max-h-fit">
           <InfoCharts />
           <Card title="Audience Overview">
             <AudienceOverview series={audienceData} xCategories={categories} />
           </Card>
         </div>
       </div>
-      <div className="flex justify-between my-4">
-        <div className="w-[58%]">
+      <div className="flex justify-between my-4 flex-col sm:flex-row">
+        <div className="sm:w-[58%]">
           <Card title="Browser Used & Traffic Reports">
             <Table>
               <thead>
@@ -117,7 +117,7 @@ const Dashboard: React.FC = () => {
             </Table>
           </Card>
         </div>
-        <div className="w-[40%] h-full">
+        <div className="sm:w-[40%] h-full">
           <Card title="Sessions Device">
             <SessionDevice
               series={sessionDeviceData.data}

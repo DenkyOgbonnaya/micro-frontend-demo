@@ -18,7 +18,7 @@ import priceVolume from "./data/historicalPriceVolume";
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="flex flex-col bg-[color:var(--body-bg)] h-full">
+    <div className="flex flex-col bg-[color:var(--body-bg)] h-full w-full">
       <BreadCrumb pageTitle="Crypto">
         <BreadCrumbItem>
           <Link to={DASHBOARD_ROUTE}>
@@ -34,15 +34,17 @@ const Dashboard: React.FC = () => {
         </BreadCrumbItem>
       </BreadCrumb>
       <TotalBalance balance={122.4678499474994} />
-      <div className="flex justify-between mt-3">
+      <div className="flex justify-between mt-3 flex-col sm:flex-row">
         {coinData.map((coin) => (
-          <div className="w-[24%]" key={coin.id}>
+          <div className="sm:w-[24%]" key={coin.id}>
             <CoinRate coinData={coin} />
           </div>
         ))}
-      </div>
-      <div className="flex justify-between  mt-3">
-        <div className="bg-white w-[70%] p-4">
+      </div> 
+
+
+      <div className="flex justify-between  mt-3 flex-col sm:flex-row">
+        <div className="bg-white sm:w-[59%] p-4">
           <div className="flex justify-between">
             <div className="flex flex-col w-[40%]">
               <div
@@ -80,25 +82,27 @@ const Dashboard: React.FC = () => {
               </div>
             </div>
 
-            <div className="w-[60%]">
+            <div className="w-[100%]">
               <PriceFilter />
             </div>
           </div>
           <PriceChart />
         </div>
-        <div className="w-[29%]">
+        <div className="sm:w-[40%]">
           <Card title="Currency Calculator">
             <CurrencyCalculator />
           </Card>
         </div>
       </div>
-      <div className=" mt-3 flex justify-between">
-        <div className="w-[30%]">
+      
+
+      <div className=" mt-3 flex flex-col justify-between sm:flex-row">
+        <div className=" sm:w-[30%]">
           <Card title="Transaction History">
             <TransactionHistory transactions={transactions} />
           </Card>
         </div>
-        <div className="w-[69%]">
+        <div className="sm:w-[69%]">
           <Card title="Historical Bitcoin Price And Volume">
             <HistoricalPriceVolume data={priceVolume} />
           </Card>

@@ -4,8 +4,8 @@ import { CurrencyCalcForm } from "../../../../components";
 
 const DefaultExample = () => {
   return (
-    <div className="flex justify-between bg-white">
-      <div className="w-[30%]">
+    <div className="flex flex-col justify-between bg-white sm:flex-row">
+      <div className="sm:w-[30%]">
         <Chart
           type="donut"
           series={[50, 25, 25]}
@@ -28,7 +28,7 @@ const DefaultExample = () => {
           }}
         />
       </div>
-      <div className="w-[69%]">
+      <div className="sm:w-[69%]">
         <div className="flex justify-between">
           <div className="bg-white py-2 shadow px-4">
             <p className="text-lg text-[color:var(--light-dark-blue)] font-semibold pb-3">

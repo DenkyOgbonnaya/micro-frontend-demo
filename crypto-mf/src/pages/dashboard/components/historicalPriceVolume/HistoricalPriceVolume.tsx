@@ -21,7 +21,7 @@ const HistoricalPriceVolume: React.FC<IProps> = ({ data }) => {
     );
   };
   return (
-    <table className="w-full">
+    <table className="w-full table-auto">
       <thead className="bg-gray-50">
         <tr>
           <th className="th">Date</th>

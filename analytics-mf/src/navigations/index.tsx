@@ -8,7 +8,7 @@ import { DASHOARD_ROUTE, CUSTOMERS_ROUTE, REPORTS_ROUTE } from "./constants";
 const Navigations: React.FC = () => {
   return (
     <Routes>
-      <Route path={DASHOARD_ROUTE} element={<Reports />} />
+      <Route path={DASHOARD_ROUTE} element={<Dashboard />} />
       <Route path={CUSTOMERS_ROUTE} element={<Customers />} />
       <Route path={REPORTS_ROUTE} element={<Reports />} />
     </Routes>

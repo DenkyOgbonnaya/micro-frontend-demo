@@ -7,8 +7,8 @@ interface Iprops {
 }
 const TotalBalance: React.FC<Iprops> = ({ balance }) => {
   return (
-    <div className="flex justify-between p-3">
-      <div className="flex">
+    <div className="flex justify-between p-3 flex-col sm:flex-row">
+      <div className="flex mb-1">
         <button className="button text-red-800 hover:bg-red-500 mr-3 text-sm group-hover:text-white group">
           <PaperAirplaneIcon className="text-red-600 w-4 h-4 mr-1 self-center group-hover:text-white" />{" "}
           <span className="group-hover:text-white">Send</span>
@@ -18,7 +18,7 @@ const TotalBalance: React.FC<Iprops> = ({ balance }) => {
           <span className="group-hover:text-white">Request</span>
         </button>
       </div>
-      <div className="flex">
+      <div className="flex mb-1">
         <img
           src={BitCoin}
           alt="bitcoin"

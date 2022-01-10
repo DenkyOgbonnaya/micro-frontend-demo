@@ -15,7 +15,7 @@ import { buyLastTrade, sellLastTrade } from "./data/lastTrade";
 
 const Exchange: React.FC = () => {
   return (
-    <div className="flex flex-col bg-[color:var(--body-bg)] h-full">
+    <div className="flex flex-col bg-[color:var(--body-bg)] h-full p-6 w-full">
       <BreadCrumb pageTitle="Crypto">
         <BreadCrumbItem>
           <Link to={DASHBOARD_ROUTE}>
@@ -43,8 +43,8 @@ const Exchange: React.FC = () => {
           </Card>
         </div>
       </section>
-      <section className="flex flex-col py-3 sm:flex-row">
-        <div className="w-full flex justify-between flex-col sm:w-[49%] sm:flex-row">
+      <section className="flex flex-col py-3 sm:flex-row flex-wrap w-full">
+        <div className="w-full flex justify-between flex-col sm:w-[100%] sm:flex-row flex-wrap">
           <div className="w-full sm:w-[49%]">
             <Card title="Buy Coin">
               <CoinForm isSell={false} lastTrade={buyLastTrade} />
@@ -56,11 +56,11 @@ const Exchange: React.FC = () => {
             </Card>
           </div>
         </div>
-        <div className="w-full sm:w-[48%]">
-          <Card title="Live Trading">
-            <LiveTrading />
-          </Card>
-        </div>
+      </section>
+      <section className="w-full">
+        <Card title="Live Trading">
+          <LiveTrading />
+        </Card>
       </section>
     </div>
   );
