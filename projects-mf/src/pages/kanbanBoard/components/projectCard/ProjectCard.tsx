@@ -38,7 +38,7 @@ const ProjectCard: React.FC<IProps> = ({ project, index }) => {
           </h4>
           <p className="text-gray-500 text-sm">{project.desc}</p>
           <div className="divider" />
-          <div className="flex justify-between pt-4">
+          <div className="flex justify-between pt-4 flex-wrap">
             <div className="flex text-sm text-gray-400 mr-1 self-center">
               <button className="p-0 w-fit h-fit border-none">
                 <ViewListIcon className="w-5 h-5 text-gray-400 mr-1" />

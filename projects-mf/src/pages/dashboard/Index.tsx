@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
         </BreadCrumbItem>
       </BreadCrumb>
       <section className="flex justify-between flex-col sm:flex-row w-full py-2">
-        <div className="w-[20%]">
+        <div className="w-[100%] sm:w-[20%]">
           <StatCard
             data={projextsData}
             TitleIcon={
@@ -62,12 +62,12 @@ const Dashboard: React.FC = () => {
             SubTitleIcon={<p className="text-sm mr-1">$14k</p>}
           />
         </div>
-        <div className="w-[53%]">
+        <div className="w-[100%] sm:w-[53%]">
           <Card title="Overview">
             <ProjectsOverview />
           </Card>
         </div>
-        <div className="w-[22%]">
+        <div className="w-[100%] sm:w-[22%]">
           <Card title="Task Perfomance">
             <TaskPerformance />
             <div className="p-2 bg-blue-100 flex justify-between group hover:bg-blue-600 my-4">
@@ -101,7 +101,7 @@ const Dashboard: React.FC = () => {
           color="border-red-400"
         />
       </section>
-      <section className="flex justify-between my-3">
+      <section className="flex flex-col justify-between my-3 sm:flex-row">
         <ProjectCard />
         <ProjectCard />
         <ProjectCard />

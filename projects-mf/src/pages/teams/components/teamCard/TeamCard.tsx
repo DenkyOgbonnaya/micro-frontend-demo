@@ -29,8 +29,8 @@ const TeamCard: React.FC<IProps> = ({ team }) => {
       <h4 className="text-[color:var(--light-dark-blue)] py-2">{team.team}</h4>
       <p className="text-gray-500 text-sm">{team.teamDesc}</p>
 
-      <div className="flex justify-between my-4">
-        <div className="img-group">
+      <div className="flex justify-between my-4 flex-wrap">
+        <div className="img-group mt-1">
           <img src={User2} alt="" className="w-8 h-8 rounded-full hover:z-20" />
           <img src={User9} alt="" className="img-group__img" />
           <img src={User5} alt="" className="img-group__img" />
@@ -42,13 +42,13 @@ const TeamCard: React.FC<IProps> = ({ team }) => {
           </div>
         </div>
 
-        <button className=" bg-gray-100 p-1 text-slate-900 text-[0.75rem] rounded-lg flex">
+        <button className=" bg-gray-100 p-1 text-slate-900 text-[0.75rem] rounded-lg flex mt-1">
           <span className="self-center">View Details</span>
           <ArrowRightIcon className="w-2 h2 ml-1 self-center" />
         </button>
       </div>
       <div className="divider" />
-      <div className="flex justify-between pt-4">
+      <div className="flex justify-between pt-4 flex-wrap">
         <div className="flex text-sm text-gray-400 mr-1 self-center">
           <img
             src={team.projectImg}
