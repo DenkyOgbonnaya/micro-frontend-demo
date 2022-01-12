@@ -1,7 +1,7 @@
 import * as React from "react";
 import Chart from "react-apexcharts";
 
-type chartData = { type?: string; name?: string; data: string[] | number[] };
+export type chartData = { type?: string; name?: string; data: string[] | number[] };
 interface IProps {
   title: string;
   Icon: React.ReactNode;
