@@ -32,7 +32,7 @@ const HistoricalPriceVolume: React.FC<IProps> = ({ data }) => {
       </thead>
       <tbody>
         {data.map((item) => (
-          <tr key={item.id}>
+          <tr key={item.id} title="price-volume">
             <td className="td">{item.date}</td>
             <td className="td">{item.price}</td>
             <td className="td">{item.volume}</td>

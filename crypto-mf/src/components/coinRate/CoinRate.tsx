@@ -32,7 +32,10 @@ const CoinRate: React.FC<IProps> = ({ coinData }) => {
           </span>
           <ArrowUpIcon className="text-green-700 w-3 h-3 mt-1" />
         </div>
-        <button className="button text-white bg-green-600 group-hover:text-white text-sm self-start ml-3 justify-self-end relative -top-7 ">
+        <button
+          title="buy-btn"
+          className="button text-white bg-green-600 group-hover:text-white text-sm self-start ml-3 justify-self-end relative -top-7 "
+        >
           <ShoppingCartIcon className="text-white w-4 h-4  self-center" /> Buy
         </button>
       </div>
