@@ -1,0 +1,75 @@
+Arguments: 
+  /home/denky/.nvm/versions/node/v14.17.6/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/denky/.nvm/versions/node/v14.17.6/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/bin:/home/denky/Android/Sdk/tools
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  14.17.6
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: connect EHOSTUNREACH 104.16.19.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1148:16)
+
+npm manifest: 
+  {
+    "name": "container",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "start": "webpack serve --config configs/webpack.dev.js"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.16.5",
+      "@babel/plugin-transform-runtime": "^7.16.5",
+      "@babel/preset-env": "^7.16.5",
+      "@babel/preset-react": "^7.16.5",
+      "@babel/preset-typescript": "^7.16.5",
+      "@svgr/webpack": "^6.1.2",
+      "@testing-library/jest-dom": "^5.16.1",
+      "@testing-library/react": "^12.1.2",
+      "@types/jest": "^27.0.3",
+      "@types/react": "^17.0.37",
+      "@types/react-dom": "^17.0.11",
+      "@typescript-eslint/eslint-plugin": "^5.7.0",
+      "@typescript-eslint/parser": "^5.7.0",
+      "babel-jest": "^27.4.5",
+      "babel-loader": "^8.2.3",
+      "clean-webpack-plugin": "^4.0.0",
+      "css-loader": "^6.5.1",
+      "eslint": "^8.5.0",
+      "file-loader": "^6.2.0",
+      "html-webpack-plugin": "^5.5.0",
+      "jest": "^27.4.5",
+      "resize-observer-polyfill": "^1.5.1",
+      "resolve-url-loader": "^4.0.0",
+      "sass": "^1.45.0",
+      "sass-loader": "^12.4.0",
+      "style-loader": "^3.3.1",
+      "tailwindcss": "^3.0.7",
+      "ts-jest": "^27.1.2",
+      "ts-loader": "^9.2.6",
+      "typescript": "^4.5.4",
+      "webpack": "^5.65.0",
+      "webpack-cli": "^4.9.1",
+      "webpack-dev-server": "^4.6.0",
+      "webpack-merge": "^5.8.0"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

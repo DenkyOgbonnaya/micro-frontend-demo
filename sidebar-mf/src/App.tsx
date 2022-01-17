@@ -2,6 +2,7 @@ import * as React from "react";
 import { AppLogo, UserInfo } from "./components";
 import SidebarMenu from "./components/sidebarMenu/SidebarMenu";
 import { user } from "./components/userInfo/UserInfo";
+import  "./styles.css";
 
 interface IState {
   user: user;
