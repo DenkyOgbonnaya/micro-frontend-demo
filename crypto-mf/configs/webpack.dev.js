@@ -23,11 +23,11 @@ const devConfig = {
       template: "./public/index.html",
     }),
     new ModuleFederationPlugin({
-      name: "crypto",
-      library: { type: "var", name: "crypto" },
+      name: "cryptos",
+      library: { type: "var", name: "cryptos" },
       filename: "remoteEntry.js",
       exposes: {
-        "./CryptoMf": "./src/bootstrap",
+        "./CryptosMf": "./src/bootstrap",
       },
       shared: packageJson.dependencies,
     }),

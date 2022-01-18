@@ -28,7 +28,10 @@ const devConfig = {
       name: "container",
       library: { type: 'var', name: 'container' },
       remotes: {
-        sidebar: "sidebar"
+        sidebar: "sidebar",
+        analytics: "analytics",
+        cryptos: "cryptos",
+        projects: "projects",
       },
       shared: packageJson.dependencies,
     }),
